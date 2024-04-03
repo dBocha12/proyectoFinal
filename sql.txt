@@ -1,0 +1,35 @@
+CREATE PROCEDURE CrearUsuarioNuevo  
+    @IdEmpleado INT,  
+    @Usuario VARCHAR(50),  
+    @Contraseña VARCHAR(50)  
+AS  
+BEGIN  
+ DECLARE @NuevoIdUsuario INT;  
+  
+ SELECT @NuevoIdUsuario = (SELECT MAX(IdUsuario) FROM Usuario) + 1;  
+  
+    INSERT INTO Usuario (IdUsuario, IdEmpleado, Usuario, Contraseña)  
+ Values(@NuevoIdUsuario, @IdEmpleado, @Usuario, @Contraseña);  
+ SELECT @NuevoIdUsuario AS NuevoIdUsuario;  
+END  
+
+-----
+
+CREATE PROCEDURE CrearEmpleadoNuevo  
+    @IdCargo INT,  
+    @DNI VARCHAR(50),  
+    @Apellidos VARCHAR(255),  
+    @Nombre VARCHAR(255),  
+    @Sexo VARCHAR(1),  
+    @Direccion VARCHAR(255),  
+    @EstadoCivil VARCHAR(50)  
+AS  
+BEGIN  
+ DECLARE @NuevoIdEmpleado INT;  
+  
+SELECT @NuevoIdEmpleado = (SELECT MAX(IdEmpleado) FROM Empleado) + 1;  
+  
+    INSERT INTO Empleado (IdEmpleado, IdCargo, DNI, Apellidos, Nombre, Sexo, Direccion, EstadoCivil)  
+ VALUES (@NuevoIdEmpleado, 1, @DNI, @Apellidos, @Nombre, @Sexo, @Direccion, @EstadoCivil)  
+ SELECT @NuevoIdEmpleado AS NuevoIdEmpleado;  
+END
