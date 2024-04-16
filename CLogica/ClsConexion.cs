@@ -14,7 +14,7 @@ namespace proyectoFinal.CLogica
 
         public ConexionBD()
         {
-            string cadenaConexion = ConfigurationManager.ConnectionStrings["NombreDeTuCadenaDeConexion"].ConnectionString;
+            string cadenaConexion = ConfigurationManager.ConnectionStrings["proyectoConexion"].ConnectionString;
             conexion = new SqlConnection(cadenaConexion);
         }
 

@@ -17,7 +17,7 @@ namespace proyectoFinal.CDatos
             {
                 using (SqlCommand comando = new SqlCommand(consulta, conexion))
                 {
-                    comando.Parameters.AddWithValue("@IdCargo", idCargo);
+                    comando.Parameters.AddWithValue("@IdCargo", 2);
                     comando.Parameters.AddWithValue("@DNI", dni);
                     comando.Parameters.AddWithValue("@Apellidos", apellidos);
                     comando.Parameters.AddWithValue("@Nombre", nombre);
@@ -44,6 +44,117 @@ namespace proyectoFinal.CDatos
             }
 
             return nuevoIdEmpleado;
+        }
+
+        public static int ConsultarIDEmpleado(int idUsuario)
+        {
+            int resultado = 0;
+            string connectionString = ConfigurationManager.ConnectionStrings["proyectoConexion"].ConnectionString;
+            string consulta = "SELECT IdEmpleado FROM Usuario WHERE IdUsuario = @Usuario;";
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                {
+                    comando.Parameters.AddWithValue("@Usuario", idUsuario);
+
+                    try
+                    {
+                        conexion.Open();
+                        resultado = (int)comando.ExecuteScalar();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error al ejecutar el procedimiento almacenado: " + ex.Message);
+                    }
+
+                }
+            }
+
+            return resultado;
+        }
+
+        public static string ObtenerNombreCompletoEmpleado(int idEmpleado)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["proyectoConexion"].ConnectionString;
+            string consulta = "EXEC ObtenerNombreCompletoEmpleado @IdEmpleado";
+            string nombreCompleto = "";
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                {
+                    comando.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
+
+                    try
+                    {
+                        conexion.Open();
+                        nombreCompleto = (string)comando.ExecuteScalar();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error al ejecutar el procedimiento almacenado: " + ex.Message);
+                    }
+                }
+            }
+
+            return nombreCompleto;
+        }
+
+        public static int VerificarCargo(int IdEmpleado)
+        {
+            int resultado = 0;
+            string connectionString = ConfigurationManager.ConnectionStrings["proyectoConexion"].ConnectionString;
+            string consulta = "SELECT IdCargo FROM Empleado WHERE IdEmpleado = @IdEmpleado";
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                {
+                    comando.Parameters.AddWithValue("@IdEmpleado", IdEmpleado);
+
+                    try
+                    {
+                        conexion.Open();
+                        resultado = (int)comando.ExecuteScalar();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error al ejecutar el procedimiento almacenado: " + ex.Message);
+                    }
+
+                }
+            }
+
+            return resultado;
+        }
+
+        public static int verificarDNI(string dni)
+        {
+            int resultado = 0;
+            string connectionString = ConfigurationManager.ConnectionStrings["proyectoConexion"].ConnectionString;
+            string consulta = "SELECT COUNT(*) FROM Empleado WHERE DNI = @DNI";
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                {
+                    comando.Parameters.AddWithValue("@DNI", dni);
+
+                    try
+                    {
+                        conexion.Open();
+                        resultado = (int)comando.ExecuteScalar();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error al ejecutar el procedimiento almacenado: " + ex.Message);
+                    }
+
+                }
+            }
+
+            return resultado;
         }
 
     }

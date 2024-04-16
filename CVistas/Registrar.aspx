@@ -5,9 +5,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="../lib/css/registro.css">
+    <link rel="stylesheet" href="../lib/css/registrar.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" />
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <title>Registro de Usuario</title>
 </head>
+
 <body>
 
     <form id="registro" runat="server">
@@ -19,10 +24,13 @@
         <br />
         <div class="registro">
             <asp:TextBox ID="txtNuevoUsuario" runat="server" CssClass="input-field" placeholder="Nuevo Usuario"></asp:TextBox><br />
-            <asp:TextBox ID="txtNuevaContraseña" runat="server" CssClass="input-field" TextMode="Password" placeholder="Nueva Contraseña"></asp:TextBox><br />
-            <asp:TextBox ID="txtDNI" runat="server" CssClass="input-field" placeholder="DNI" maxlength="8"></asp:TextBox><br />
+            <asp:TextBox ID="txtDNI" runat="server" CssClass="input-field" placeholder="DNI" maxlength="9"></asp:TextBox><br />
             <asp:TextBox ID="txtApellidos" runat="server" CssClass="input-field" placeholder="Apellidos" maxlength="255"></asp:TextBox><br />
             <asp:TextBox ID="txtNombre" runat="server" CssClass="input-field" placeholder="Nombre" maxlength="255"></asp:TextBox><br />
+            <asp:TextBox ID="txtCorreo" runat="server" CssClass="input-field" placeholder="Correo" maxlength="255"></asp:TextBox><br />
+            <asp:FileUpload ID="FileUpload" runat="server" accept="image/*" style="opacity: 0; position: absolute; z-index: -1;" />
+<label for="FileUpload" class="btn-submit">Imagen de perfil</label>
+
             <asp:DropDownList ID="listSexo" runat="server" CssClass="input-field">
                 <asp:ListItem Text="Masculino" Value="M"></asp:ListItem>
                 <asp:ListItem Text="Femenino" Value="F"></asp:ListItem>

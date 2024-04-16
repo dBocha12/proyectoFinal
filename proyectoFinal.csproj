@@ -67,18 +67,42 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CVistas\adminUsuario.aspx" />
+    <Content Include="CVistas\CambioContrasena.aspx" />
     <Content Include="CVistas\Inicio.aspx" />
     <Content Include="CVistas\Registrar.aspx" />
-    <Content Include="lib\css\logins.css" />
-    <Content Include="lib\css\registro.css" />
+    <Content Include="CVistas\princi.aspx" />
+    <Content Include="lib\css\adminUsuarios.css" />
+    <Content Include="lib\css\cambiocontrasena.css" />
+    <Content Include="lib\css\principal1.css" />
+    <Content Include="lib\css\login.css" />
+    <Content Include="lib\css\registrar.css" />
     <Content Include="lib\imgs\imagen.png" />
     <Content Include="Web.config" />
     <Content Include="login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CDatos\ClsAdmin.cs" />
     <Compile Include="CDatos\ClsEmpleado.cs" />
     <Compile Include="CDatos\ClsUsuario.cs" />
+    <Compile Include="CDatos\ClsVerificarLogin.cs" />
     <Compile Include="CLogica\ClsConexion.cs" />
+    <Compile Include="CLogica\ClsCorreos.cs" />
+    <Compile Include="CLogica\ClsEncriptador.cs" />
+    <Compile Include="CVistas\adminUsuario.aspx.cs">
+      <DependentUpon>adminUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CVistas\adminUsuario.aspx.designer.cs">
+      <DependentUpon>adminUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CVistas\CambioContrasena.aspx.cs">
+      <DependentUpon>CambioContrasena.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CVistas\CambioContrasena.aspx.designer.cs">
+      <DependentUpon>CambioContrasena.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CVistas\Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -93,11 +117,12 @@
     <Compile Include="CVistas\Registrar.aspx.designer.cs">
       <DependentUpon>Registrar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="lib\css\login.cs">
+    <Compile Include="CVistas\princi.aspx.cs">
+      <DependentUpon>princi.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="lib\css\login.designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="CVistas\princi.aspx.designer.cs">
+      <DependentUpon>princi.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="login.aspx.cs">
@@ -117,7 +142,10 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="lib\imgs\perfil\" />
+    <Folder Include="lib\js\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

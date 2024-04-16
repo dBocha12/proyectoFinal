@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../imgs/imagen.png);
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+        nav ul li.right {
+            float: right;
+            color: #fff;
+            font-family: 'Exo', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+
+        }
+
+
+        nav ul li a {
+            color: #fff;
+            font-family: 'Exo', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #4daf7c;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+            nav ul li a:hover {
+                background-color: #388d61;
+            }
+
+.nav-button {
+    color: #fff;
+    font-family: 'Exo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #4daf7c;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+    .nav-button:hover {
+        background-color: #388d61;
+    }
+
+.container {
+    display: block;
+    background-color: #fff;
+    width: 80%;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 700px;
+}
+
+    .container #bienvenida,
+    .container #lblUsuario {
+        font-family: "Kanit", sans-serif;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .container img {
+        margin-top: 50px;
+        width: 200px;
+    }

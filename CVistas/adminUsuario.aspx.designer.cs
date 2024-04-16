@@ -7,110 +7,119 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace proyectoFinal
+namespace proyectoFinal.CVistas
 {
 
 
-    public partial class Registrar
+    public partial class adminUsuario
     {
 
         /// <summary>
-        /// Control registro.
+        /// Control form1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm registro;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control txtNuevoUsuario.
+        /// Control nombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNuevoUsuario;
+        protected global::System.Web.UI.WebControls.TextBox nombre;
 
         /// <summary>
-        /// Control txtDNI.
+        /// Control apellidos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDNI;
+        protected global::System.Web.UI.WebControls.TextBox apellidos;
 
         /// <summary>
-        /// Control txtApellidos.
+        /// Control dni.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellidos;
+        protected global::System.Web.UI.WebControls.TextBox dni;
 
         /// <summary>
-        /// Control txtNombre.
+        /// Control sexo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.DropDownList sexo;
 
         /// <summary>
-        /// Control txtCorreo.
+        /// Control direccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCorreo;
+        protected global::System.Web.UI.WebControls.TextBox direccion;
 
         /// <summary>
-        /// Control FileUpload.
+        /// Control estadoCivil.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload;
+        protected global::System.Web.UI.WebControls.DropDownList estadoCivil;
 
         /// <summary>
-        /// Control listSexo.
+        /// Control usuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList listSexo;
+        protected global::System.Web.UI.WebControls.TextBox usuario;
 
         /// <summary>
-        /// Control txtDireccion.
+        /// Control contrasena.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDireccion;
+        protected global::System.Web.UI.WebControls.TextBox contrasena;
 
         /// <summary>
-        /// Control listEstadoCivil.
+        /// Control correo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList listEstadoCivil;
+        protected global::System.Web.UI.WebControls.TextBox correo;
 
         /// <summary>
-        /// Control btnCrearUsuario.
+        /// Control puesto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCrearUsuario;
+        protected global::System.Web.UI.WebControls.DropDownList puesto;
+
+        /// <summary>
+        /// Control btnGuardarCambios.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGuardarCambios;
     }
 }
